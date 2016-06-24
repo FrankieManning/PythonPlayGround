@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pandas
 from pandas.core.frame import DataFrame
 from numpy.ma import divide
-from cashFlow.datesTiming import dayFactorSys
+from cashFlow.datesTiming import dayFactorSystem
 
 class VecotrCls:
    def __init__(self, closingDate, maturityDate, dayFactor):
