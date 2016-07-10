@@ -25,14 +25,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="cashFlow\datesTiming\dayFactorSystem.py">
+    <Compile Include="cashFlow\datesTiming.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cashFlow\vector.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Pythontest.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cashFlow\" />
-    <Folder Include="cashFlow\datesTiming\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

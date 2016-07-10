@@ -36,6 +36,38 @@ def Days360(startDate, endDate, method):
     return dayFactor;
  
 def Days360US(startDate, endDate):
-def Days360EU(startDate, endDate):
+    dayFactor = 0;
+    endDateDay = 0;
+    startDateDay = 0;
+    deltaMonthsBetweenStartDateEndDat = 0;
+
+    if (isLastDayOfMonth(endDate)):
+        endDateDay = 30
+    else:
+        endDateDay = endDate.day
+    if (isLastDayOfMonth(startDate)):
+        startDateDay = 30
+    else:
+        startDateDay = startDate.day
+    if startDateDay < endDateDay:
+        deltaMonthsBetweenStartDateEndDat = ( endDate - startDate ).months - 1  
+    else:
+        deltaMonthsBetweenStartDateEndDat = ( endDate - startDate ).months
+        
+    dayFactor = deltaMonthsBetweenStartDateEndDat * 30 + 30 - startDate.day + endDate.day
+
+    return dayFactor;
+
+#def Days360EU(startDate, endDate):
 def GetDayFactorForActual360(startDate, endDate):
+    dayFactor = 0;
+    dayFactor = ( startDate- endDate ).days/360
+
+    return dayFactor;
+
 def GetDayFactorForActualActual(startDate, endDate):
+    dayFactor = 0;
+    dayFactor = ( startDate- endDate ).days/365
+
+    return dayFactor;
+
